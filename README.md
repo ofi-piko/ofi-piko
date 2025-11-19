@@ -22,11 +22,14 @@
 
 ---
 
-## 📈 GitHub статистика
+## 📊 Моя статистика
 
 <p align="center">
-  <img height="180" src="https://www.codewars.com/users/ofi_piko/badges/large"/>
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ofi-piko&layout=compact&theme=tokyonight" />
+  <img height="180" src="https://www.codewars.com/users/ofi_piko/badges/large" alt="Codewars Badge"/>
+</p>
+
+<p align="center">
+  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ofi-piko&layout=compact&theme=tokyonight" alt="Top Languages"/>
 </p>
 
 ---
