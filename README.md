@@ -25,15 +25,14 @@
 ## 📈 GitHub статистика
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=YourUsername&show_icons=true&theme=tokyonight"/>
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YourUsername&layout=compact&theme=tokyonight"/>
+  <img height="180" src="[https://github-readme-stats.vercel.app/api?username=YourUsername&show_icons=true&theme=tokyonight](https://www.codewars.com/users/ofi_piko/badges/large)"/>
 </p>
 
 ---
 
 ## 📫 Контакты
-- 📧 Email: *укажи свой email*  
-- 💬 Telegram: *укажи свой tg*  
+- 📧 Email: ofipiko@gmail.com
+- 💬 Telegram: ofi_piko or ofi_piko2
 
 ---
 
