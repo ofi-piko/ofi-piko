@@ -25,7 +25,7 @@
 ## 📈 GitHub статистика
 
 <p align="center">
-  <img height="180" src="[https://github-readme-stats.vercel.app/api?username=YourUsername&show_icons=true&theme=tokyonight](https://www.codewars.com/users/ofi_piko/badges/large)"/>
+  <img height="180" src="https://www.codewars.com/users/ofi_piko/badges/large"/>
 </p>
 
 ---
