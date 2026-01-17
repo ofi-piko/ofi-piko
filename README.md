@@ -11,7 +11,6 @@
 - 🌱 Изучаю: **JavaScript, HTML, CSS**  
 - 🎯 Цель: стать профессиональным frontend-разработчиком  
 - ⚡ Факт: люблю чистый и аккуратный код  
-
 ---
 
 ## 🛠️ Технологии и инструменты
@@ -28,10 +27,6 @@
   <img height="180" src="https://www.codewars.com/users/ofi_piko/badges/large" alt="Codewars Badge"/>
 </p>
 
-<p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ofi-piko&layout=compact&theme=tokyonight" alt="Top Languages"/>
-</p>
-
 ---
 
 ## 📫 Контакты
@@ -39,6 +34,9 @@
 - 💬 Telegram: ofi_piko or ofi_piko2
 
 ---
+
+## по больше о бо мне тут
+- сыллка на сайт где больше сказано
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&fontAlign=100&descAlignY=0&descAlign=0&fontAlignY=100&animation=fadeIn&section=footer"/>
