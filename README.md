@@ -16,7 +16,7 @@
 ## 🛠️ Технологии и инструменты
 
 <p align="center"> 
-  <img src="https://skillicons.dev/icons?i=js,html,css,github,vscode" />
+  <img src="[https://skillicons.dev/icons?i=js,html,css,github,vscode](https://skillicons.dev/icons?i=js,html,css,github,vscode,python,nodejs,bash,pycharm)" />
 </p>
 
 ---
