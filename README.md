@@ -1,47 +1,24 @@
-## <h2 align="center">CONNECT WITH ME</h2>
+<div align="center">
 
-<p align="center">
-  <a href="https://github.com/ofi-piko"><img width="38" src="https://skills.syvixor.com/api/icons?i=github&perline=1&radius=40"/></a>
-  <a href="https://t.me/ofi_piko"><img width="38" src="https://skills.syvixor.com/api/icons?i=telegram&perline=1&radius=40"/></a>
-  <a href="https://instagram.com/mewelldon"><img width="38" src="https://skills.syvixor.com/api/icons?i=instagram&perline=1&radius=40"/></a>
-  <a href="mailto:ofipiko@gmail.com"><img width="38" src="https://skills.syvixor.com/api/icons?i=gmail&perline=1&radius=40"/></a>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:09070b,55:4b000c,100:7b2037&height=190&section=header&text=OFI%20PIKO&fontSize=58&fontColor=ffffff&fontAlignY=38&desc=Frontend%20Developer%20%7C%20Backend%20Explorer&descSize=16&descAlignY=60&animation=fadeIn" width="100%"/>
+
+### Developer · Builder · Problem Solver
+
+<p>
+  <a href="https://ofi-piko.github.io/ofi-piko/">
+    <img src="https://img.shields.io/badge/OPEN%20PORTFOLIO-ofi--piko.github.io-7b2037?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+  </a>
+  <a href="https://github.com/ofi-piko">
+    <img src="https://img.shields.io/badge/GITHUB-OFI--PIKO-171219?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
 </p>
+
+**My portfolio, technologies, projects and contact information live on my website.**
+
+[**Visit the portfolio →**](https://ofi-piko.github.io/ofi-piko/)
+
+</div>
 
 ---
 
-## <h2 align="center">LANGUAGES & TOOLS</h2>
-
-<h3 align="center">Programming Languages</h3>
-<p align="center">
-  <img src="https://skills.syvixor.com/api/icons?i=cpp,csharp,java,rust,python,js,ts,bash&perline=8&radius=15"/>
-</p>
-
-<h3 align="center">Frontend Development</h3>
-<p align="center">
-  <img src="https://skills.syvixor.com/api/icons?i=html,css,react,vue&perline=8&radius=15"/>
-</p>
-
-<h3 align="center">Backend Development</h3>
-<p align="center">
-  <img src="https://skills.syvixor.com/api/icons?i=django,expressjs,node&perline=8&radius=15"/>
-</p>
-
-<h3 align="center">Mobile & Desktop Development</h3>
-<p align="center">
-  <img src="https://skills.syvixor.com/api/icons?i=android,reactnative,gtk&perline=8&radius=15"/>
-</p>
-
-<h3 align="center">Databases & Messaging</h3>
-<p align="center">
-  <img src="https://skills.syvixor.com/api/icons?i=mongodb,mysql,postgresql,rabbitmq&perline=8&radius=15"/>
-</p>
-
-<h3 align="center">Cloud, DevOps & Tools</h3>
-<p align="center">
-  <img src="https://skills.syvixor.com/api/icons?i=aws,googlecloud,docker,git,linux&perline=8&radius=15"/>
-</p>
-
-<h3 align="center">Game Development</h3>
-<p align="center">
-  <img src="https://skills.syvixor.com/api/icons?i=unity,unreal&perline=8&radius=15"/>
-</p>
+<sub>The website source is maintained in this repository: <a href="./index.html">index.html</a>.</sub>
