@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09070b">
+  <meta name="description" content="Ofi Piko — frontend developer exploring backend and mobile development. Projects, technologies and contact links.">
+  <meta property="og:title" content="Ofi Piko — Developer Portfolio">
+  <meta property="og:description" content="Frontend development, backend experiments and digital products.">
+  <meta property="og:type" content="website">
+  <title>Ofi Piko — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #09070b;
+      --surface: #100d13;
+      --surface-2: #151018;
+      --line: rgba(255,255,255,.085);
+      --text: #f3edf3;
+      --muted: #a79ba9;
+      --accent: #c44b62;
+      --accent-2: #7b2037;
+      --glow: rgba(196,75,98,.18);
+      --mono: "DM Mono", monospace;
+      --sans: "Manrope", sans-serif;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 78% 4%, rgba(123,32,55,.17), transparent 34rem),
+        radial-gradient(ellipse at 5% 38%, rgba(196,75,98,.07), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    .shell { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(9,7,11,.78);
+      backdrop-filter: blur(18px);
+    }
+    .nav {
+      min-height: 72px; display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.04em; }
+    .brand-mark {
+      display: grid; place-items: center; width: 34px; height: 34px;
+      border: 1px solid rgba(196,75,98,.55); border-radius: 10px;
+      color: #f4a0ad; background: linear-gradient(145deg, rgba(196,75,98,.2), rgba(123,32,55,.07));
+      font-family: var(--mono); font-size: 15px;
+    }
+    .brand span:last-child { font-size: 15px; }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: var(--muted); font-size: 12px; }
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      border: 1px solid rgba(196,75,98,.5); border-radius: 999px;
+      padding: 9px 15px; color: #f2cbd1; font-size: 12px; font-weight: 700;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+    .nav-cta:hover { background: rgba(196,75,98,.12); border-color: var(--accent); transform: translateY(-1px); }
+
+    .hero { padding: 104px 0 84px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 64px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px; color: #d98796;
+      font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--accent); }
+    h1 { margin: 22px 0 18px; font-size: clamp(48px, 8vw, 88px); line-height: .98; letter-spacing: -.075em; }
+    h1 .accent { color: #d35c72; }
+    .hero-copy { max-width: 590px; color: var(--muted); font-size: 16px; line-height: 1.9; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 46px; padding: 0 18px; border-radius: 10px; font-size: 12px; font-weight: 800;
+      transition: transform .2s, background .2s, border-color .2s;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: linear-gradient(135deg, #a9324d, #702038); color: white; box-shadow: 0 10px 30px rgba(123,32,55,.2); }
+    .button-secondary { border: 1px solid var(--line); color: #ddd2dc; background: rgba(255,255,255,.025); }
+    .button-secondary:hover { border-color: rgba(196,75,98,.45); background: rgba(196,75,98,.07); }
+
+    .terminal {
+      position: relative; border: 1px solid rgba(196,75,98,.25); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(24,17,26,.96), rgba(12,10,15,.96));
+      box-shadow: 0 25px 90px rgba(0,0,0,.4), 0 0 70px var(--glow);
+      overflow: hidden; transform: rotate(1.2deg);
+    }
+    .terminal-top { height: 45px; display: flex; align-items: center; gap: 7px; padding: 0 16px; border-bottom: 1px solid var(--line); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #62303e; }
+    .dot:nth-child(2) { background: #98613f; }
+    .dot:nth-child(3) { background: #52715c; }
+    .terminal-label { margin-left: auto; color: #756b79; font: 10px var(--mono); }
+    .terminal-body { padding: 25px 23px 28px; font: 12px/2.15 var(--mono); color: #c7b9c8; }
+    .terminal-body .comment { color: #746979; }
+    .terminal-body .key { color: #e17b91; }
+    .terminal-body .value { color: #d6c2d5; }
+    .terminal-body .cursor { display: inline-block; width: 7px; height: 14px; margin-left: 3px; vertical-align: -2px; background: var(--accent); animation: blink 1s steps(2) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .quick-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.015); }
+    .quick-grid { display: grid; grid-template-columns: repeat(3,1fr); }
+    .quick-item { padding: 22px 25px; border-right: 1px solid var(--line); }
+    .quick-item:first-child { padding-left: 0; }
+    .quick-item:last-child { border-right: 0; }
+    .quick-title { color: var(--text); font-size: 13px; font-weight: 800; }
+    .quick-sub { display: block; margin-top: 3px; color: var(--muted); font: 10px var(--mono); letter-spacing: .04em; }
+
+    section { padding: 92px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 32px; }
+    .section-kicker { color: var(--accent); font: 11px var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+    h2 { margin: 8px 0 0; font-size: clamp(27px, 4vw, 39px); line-height: 1.15; letter-spacing: -.055em; }
+    .section-note { max-width: 390px; color: var(--muted); font-size: 12px; }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .panel {
+      border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+      padding: 27px;
+    }
+    .panel p { color: var(--muted); font-size: 13px; margin: 0; }
+    .panel p + p { margin-top: 13px; }
+    .about-label { display: block; margin-bottom: 14px; color: #d98796; font: 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .focus-list { display: grid; gap: 13px; }
+    .focus-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 12px; }
+    .focus-row:last-child { padding: 0; border: 0; }
+    .focus-row span:first-child { color: #e9dfe8; font-weight: 700; }
+    .focus-row span:last-child { color: var(--muted); font: 10px var(--mono); text-align: right; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+    .skill-card {
+      min-width: 0; border: 1px solid var(--line); border-radius: 14px;
+      background: rgba(255,255,255,.018); padding: 23px;
+      transition: border-color .2s, transform .2s, background .2s;
+    }
+    .skill-card:hover { border-color: rgba(196,75,98,.35); background: rgba(196,75,98,.035); transform: translateY(-2px); }
+    .skill-card h3 { margin: 0 0 17px; font-size: 14px; letter-spacing: -.02em; }
+    .skill-icons { display: flex; align-items: center; min-height: 48px; margin-bottom: 14px; }
+    .skill-icons img { max-height: 42px; object-fit: contain; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag { padding: 5px 9px; border: 1px solid var(--line); border-radius: 6px; color: #b9aeba; font: 10px var(--mono); }
+
+    .projects-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+    .project {
+      position: relative; display: flex; flex-direction: column; min-height: 220px;
+      padding: 23px; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(155deg, rgba(28,19,29,.85), rgba(13,11,16,.9));
+      transition: transform .2s, border-color .2s;
+    }
+    .project:hover { transform: translateY(-4px); border-color: rgba(196,75,98,.5); }
+    .project-top { display: flex; align-items: center; justify-content: space-between; color: #d98796; font: 10px var(--mono); }
+    .project-icon { display: grid; place-items: center; width: 38px; height: 38px; margin: 23px 0 13px; border-radius: 11px; background: rgba(196,75,98,.1); color: #e58b9d; font: 15px var(--mono); }
+    .project h3 { margin: 0; font-size: 16px; letter-spacing: -.03em; }
+    .project p { margin: 8px 0 20px; color: var(--muted); font-size: 11px; }
+    .project-link { display: inline-flex; align-items: center; gap: 7px; margin-top: auto; color: #e28a9b; font: 10px var(--mono); }
+    .project-link span { transition: transform .2s; }
+    .project:hover .project-link span { transform: translate(3px,-3px); }
+
+    .stats-wrap { padding: 25px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.018); }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 13px; }
+    .stats-grid img { display: block; width: 100%; height: auto; }
+    .stats-streak { margin-top: 15px; text-align: center; }
+    .stats-streak img { max-width: 680px; width: 100%; }
+    .codewars { margin-top: 22px; text-align: center; }
+    .codewars img { max-width: 100%; }
+
+    .contact-panel {
+      display: flex; align-items: center; justify-content: space-between; gap: 30px;
+      padding: 35px; border: 1px solid rgba(196,75,98,.28); border-radius: 17px;
+      background: radial-gradient(ellipse at 90% 20%, rgba(196,75,98,.13), transparent 50%), #100d13;
+    }
+    .contact-panel h2 { margin: 7px 0 10px; }
+    .contact-panel p { margin: 0; color: var(--muted); font-size: 12px; }
+    .socials { display: flex; flex-wrap: wrap; gap: 10px; }
+    .social-link {
+      display: grid; place-items: center; width: 43px; height: 43px;
+      border: 1px solid var(--line); border-radius: 11px; background: rgba(255,255,255,.025);
+      transition: border-color .2s, transform .2s, background .2s;
+    }
+    .social-link:hover { border-color: rgba(196,75,98,.55); background: rgba(196,75,98,.1); transform: translateY(-2px); }
+    .social-link img { width: 20px; height: 20px; object-fit: contain; filter: invert(.85); }
+
+    footer { padding: 25px 0 35px; border-top: 1px solid var(--line); color: #746b77; font: 10px var(--mono); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-mark { color: #c56a7c; }
+
+    @media (max-width: 800px) {
+      .hero { padding: 75px 0 62px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; }
+      .terminal { max-width: 520px; width: 100%; transform: none; }
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { gap: 14px; }
+      .nav-links a:nth-child(2), .nav-links a:nth-child(3) { display: none; }
+    }
+    @media (max-width: 590px) {
+      .shell { width: min(100% - 30px, var(--max)); }
+      .nav { min-height: 64px; }
+      .nav-links { display: none; }
+      .hero { padding: 65px 0 55px; }
+      h1 { font-size: clamp(46px, 15vw, 68px); }
+      .hero-copy { font-size: 14px; }
+      .quick-grid { grid-template-columns: 1fr; }
+      .quick-item, .quick-item:first-child { padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .quick-item:last-child { border-bottom: 0; }
+      section { padding: 68px 0; }
+      .section-head { display: block; }
+      .section-note { margin-top: 12px; }
+      .about-grid, .skills-grid, .projects-grid, .stats-grid { grid-template-columns: 1fr; }
+      .panel, .skill-card { padding: 21px; }
+      .stats-wrap { padding: 15px; }
+      .contact-panel { align-items: flex-start; flex-direction: column; padding: 25px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="#home" aria-label="Ofi Piko home">
+        <span class="brand-mark">◈</span>
+        <span>ofi_piko</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#stack">Tech stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#stats">Statistics</a>
+      </nav>
+      <a class="nav-cta" href="#contact">LET'S CONNECT ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="shell hero-grid">
+        <div>
+          <div class="eyebrow">Developer portfolio · Uzbekistan</div>
+          <h1>OFI<br><span class="accent">PIKO.</span></h1>
+          <p class="hero-copy">
+            Frontend developer focused on building thoughtful digital experiences.
+            Exploring backend systems, mobile applications and the tools that bring ideas to life.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore projects <span>↘</span></a>
+            <a class="button button-secondary" href="https://github.com/ofi-piko" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+          </div>
+        </div>
+
+        <div class="terminal" aria-label="Developer profile terminal card">
+          <div class="terminal-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="terminal-label">ofi-piko / profile</span>
+          </div>
+          <div class="terminal-body">
+            <div class="comment">// a little about me</div>
+            <div><span class="key">const</span> developer = {</div>
+            <div>&nbsp;&nbsp;name: <span class="value">"Ofi Piko"</span>,</div>
+            <div>&nbsp;&nbsp;role: <span class="value">"Frontend Developer"</span>,</div>
+            <div>&nbsp;&nbsp;focus: [</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">"Web Development"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">"Backend"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">"Mobile Apps"</span></div>
+            <div>&nbsp;&nbsp;],</div>
+            <div>&nbsp;&nbsp;mindset: <span class="value">"Keep building."</span></div>
+            <div>};<span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-strip">
+      <div class="shell quick-grid">
+        <div class="quick-item"><span class="quick-title">Frontend first</span><span class="quick-sub">INTERFACES · EXPERIENCE · DETAIL</span></div>
+        <div class="quick-item"><span class="quick-title">Full-stack curiosity</span><span class="quick-sub">APIS · DATABASES · SERVICES</span></div>
+        <div class="quick-item"><span class="quick-title">Always building</span><span class="quick-sub">PROJECTS · EXPERIMENTS · LEARNING</span></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-kicker">01 / About</div><h2>A bit about me</h2></div>
+          <p class="section-note">Curiosity turns into projects. Projects turn into experience.</p>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <span class="about-label">The person behind the code</span>
+            <p>I'm a developer who enjoys creating web interfaces, applications and practical digital products. I care about how things look, how they work and how the pieces fit together.</p>
+            <p>My main direction is frontend development, while I keep expanding into backend development, databases and mobile apps.</p>
+          </article>
+          <article class="panel">
+            <span class="about-label">Current direction</span>
+            <div class="focus-list">
+              <div class="focus-row"><span>Frontend engineering</span><span>React · TypeScript</span></div>
+              <div class="focus-row"><span>Backend development</span><span>Python · APIs</span></div>
+              <div class="focus-row"><span>Mobile development</span><span>React Native · Expo</span></div>
+              <div class="focus-row"><span>Product thinking</span><span>UI/UX · Figma</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-kicker">02 / Tech stack</div><h2>Tools of the trade</h2></div>
+          <p class="section-note">A broad toolkit across programming, web, backend, infrastructure and creative technologies.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Programming languages</h3>
+            <div class="skill-icons"><img src="https://skills.syvixor.com/api/icons?i=cpp,csharp,java,rust,python,js,typescript,bash&perline=8&radius=12" alt="C++, C sharp, Java, Rust, Python, JavaScript, TypeScript and Bash icons"></div>
+            <div class="skill-tags"><span class="tag">C++</span><span class="tag">C#</span><span class="tag">Java</span><span class="tag">Rust</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">Bash</span></div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Frontend development</h3>
+            <div class="skill-icons"><img src="https://skills.syvixor.com/api/icons?i=html,css,react,vue&perline=8&radius=12" alt="HTML, CSS, React and Vue icons"></div>
+            <div class="skill-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">React</span><span class="tag">Vue</span></div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Backend development</h3>
+            <div class="skill-icons"><img src="https://skills.syvixor.com/api/icons?i=django,docker,express,nodejs&perline=8&radius=12" alt="Django, Docker, Express and Node.js icons"></div>
+            <div class="skill-tags"><span class="tag">Django</span><span class="tag">Docker</span><span class="tag">Express</span><span class="tag">Node.js</span></div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Mobile & desktop development</h3>
+            <div class="skill-icons"><img src="https://skills.syvixor.com/api/icons?i=android,gtk,reactnative&perline=8&radius=12" alt="Android, GTK and React Native icons"></div>
+            <div class="skill-tags"><span class="tag">Android</span><span class="tag">GTK</span><span class="tag">React Native</span></div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Databases & messaging</h3>
+            <div class="skill-icons"><img src="https://skills.syvixor.com/api/icons?i=mongodb,mysql,postgresql,rabbitmq&perline=8&radius=12" alt="MongoDB, MySQL, PostgreSQL and RabbitMQ icons"></div>
+            <div class="skill-tags"><span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">RabbitMQ</span></div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Cloud, DevOps & tools</h3>
+            <div class="skill-icons"><img src="https://skills.syvixor.com/api/icons?i=aws,gcp,git,linux&perline=8&radius=12" alt="AWS, Google Cloud, Git and Linux icons"></div>
+            <div class="skill-tags"><span class="tag">AWS</span><span class="tag">Google Cloud</span><span class="tag">Git</span><span class="tag">Linux</span></div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Game development</h3>
+            <div class="skill-icons"><img src="https://skills.syvixor.com/api/icons?i=unity,unreal&perline=8&radius=12" alt="Unity and Unreal Engine icons"></div>
+            <div class="skill-tags"><span class="tag">Unity</span><span class="tag">Unreal Engine</span></div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Additional tools & frameworks</h3>
+            <div class="skill-icons"><img src="https://skills.syvixor.com/api/icons?i=vite,sass,flask,fastapi,supabase,figma,vercel&perline=7&radius=12" alt="Vite, Sass, Flask, FastAPI, Supabase, Figma and Vercel icons"></div>
+            <div class="skill-tags"><span class="tag">Vite</span><span class="tag">Sass</span><span class="tag">Flask</span><span class="tag">FastAPI</span><span class="tag">Supabase</span><span class="tag">Figma</span><span class="tag">Vercel</span><span class="tag">Expo</span><span class="tag">SQLAlchemy</span><span class="tag">aiogram</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-kicker">03 / Selected work</div><h2>Projects I'm building</h2></div>
+          <p class="section-note">A selection of repositories and experiments from my GitHub.</p>
+        </div>
+        <div class="projects-grid">
+          <a class="project" href="https://github.com/ofi-piko/savatcha" target="_blank" rel="noreferrer">
+            <div class="project-top"><span>01 / APPLICATION</span><span>↗</span></div>
+            <div class="project-icon">S.</div>
+            <h3>Savatcha</h3>
+            <p>A mobile shopping application with a product catalog, cart, orders and Supabase integration.</p>
+            <span class="project-link">VIEW REPOSITORY <span>↗</span></span>
+          </a>
+          <a class="project" href="https://github.com/ofi-piko/Windows-11-Web" target="_blank" rel="noreferrer">
+            <div class="project-top"><span>02 / WEB EXPERIMENT</span><span>↗</span></div>
+            <div class="project-icon">W.</div>
+            <h3>Windows 11 Web</h3>
+            <p>A browser-based interface experiment inspired by the Windows desktop experience.</p>
+            <span class="project-link">VIEW REPOSITORY <span>↗</span></span>
+          </a>
+          <a class="project" href="https://github.com/ofi-piko/MacOS-Tahoe-Web" target="_blank" rel="noreferrer">
+            <div class="project-top"><span>03 / WEB EXPERIMENT</span><span>↗</span></div>
+            <div class="project-icon">M.</div>
+            <h3>macOS Tahoe Web</h3>
+            <p>A web interface experiment recreating parts of the macOS desktop environment.</p>
+            <span class="project-link">VIEW REPOSITORY <span>↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="section-kicker">04 / Activity</div><h2>GitHub statistics</h2></div>
+          <p class="section-note">Automatically generated statistics from my public GitHub activity.</p>
+        </div>
+        <div class="stats-wrap">
+          <div class="stats-grid">
+            <img src="https://github-readme-stats.vercel.app/api?username=ofi-piko&show_icons=true&hide_border=true&bg_color=100d13&title_color=d66b80&icon_color=d66b80&text_color=e8dfe8&rank_icon=github" alt="GitHub overview statistics">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ofi-piko&layout=compact&hide_border=true&bg_color=100d13&title_color=d66b80&text_color=e8dfe8" alt="Most used programming languages">
+          </div>
+          <div class="stats-streak">
+            <img src="https://streak-stats.demolab.com?user=ofi-piko&theme=dark&hide_border=true&background=100d13&ring=c44b62&fire=c44b62&currStreakLabel=d66b80" alt="GitHub contribution streak">
+          </div>
+          <div class="codewars">
+            <div class="section-kicker">Codewars</div>
+            <a href="https://www.codewars.com/users/ofi_piko" target="_blank" rel="noreferrer">
+              <img src="https://www.codewars.com/users/ofi_piko/badges/large" alt="Ofi Piko Codewars badge">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="shell">
+        <div class="contact-panel">
+          <div>
+            <div class="section-kicker">05 / Contact</div>
+            <h2>Let's build something.</h2>
+            <p>Find me around the web or take a look at what I'm working on.</p>
+          </div>
+          <div class="socials">
+            <a class="social-link" href="https://github.com/ofi-piko" target="_blank" rel="noreferrer" aria-label="GitHub"><img src="https://skills.syvixor.com/api/icons?i=github&perline=1" alt=""></a>
+            <a class="social-link" href="https://t.me/ofi_piko" target="_blank" rel="noreferrer" aria-label="Telegram"><img src="https://skills.syvixor.com/api/icons?i=telegram&perline=1" alt=""></a>
+            <a class="social-link" href="https://instagram.com/mewelldon" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="https://skills.syvixor.com/api/icons?i=instagram&perline=1" alt=""></a>
+            <a class="social-link" href="mailto:ofipiko@gmail.com" aria-label="Email"><img src="https://skills.syvixor.com/api/icons?i=gmail&perline=1" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <span><span class="footer-mark">◈</span> OFI PIKO — DEVELOPER PORTFOLIO</span>
+      <span>DESIGNED & BUILT WITH CODE</span>
+    </div>
+  </footer>
+</body>
+</html>
