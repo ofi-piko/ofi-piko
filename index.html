@@ -227,6 +227,79 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
+  
+    /* Monochrome typography: blue is reserved for backgrounds and surfaces. */
+    :root {
+      --bg: #05080d;
+      --surface: #0c1119;
+      --surface-2: #121a26;
+      --line: rgba(255,255,255,.12);
+      --text: #ffffff;
+      --muted: #c4c4c4;
+      --accent: #2563eb;
+      --accent-2: #174b88;
+      --glow: rgba(37,99,235,.20);
+    }
+    .topbar { background: rgba(5,8,13,.88); }
+    .brand-mark {
+      color: #ffffff;
+      border-color: rgba(255,255,255,.22);
+      background: linear-gradient(145deg, #2563eb, #174b88);
+    }
+    .nav-cta {
+      color: #ffffff;
+      border-color: rgba(255,255,255,.22);
+      background: #174b88;
+    }
+    .nav-cta:hover { color: #ffffff; background: #2563eb; border-color: rgba(255,255,255,.55); }
+    .eyebrow { color: #ffffff; }
+    .eyebrow::before { background: #2563eb; }
+    h1 .accent { color: #ffffff; }
+    .button-primary {
+      background: linear-gradient(135deg, #2563eb, #174b88);
+      color: #ffffff;
+    }
+    .button-secondary { color: #ffffff; }
+    .button-secondary:hover {
+      color: #ffffff;
+      border-color: rgba(255,255,255,.5);
+      background: rgba(37,99,235,.24);
+    }
+    .terminal {
+      border-color: rgba(255,255,255,.18);
+      background: linear-gradient(145deg, #101927, #080c13);
+    }
+    .terminal-label { color: #bdbdbd; }
+    .terminal-body, .terminal-body .key, .terminal-body .value { color: #ffffff; }
+    .terminal-body .comment { color: #bdbdbd; }
+    .terminal-body .cursor { background: #2563eb; }
+    .section-kicker, .about-label, .project-top, .project-link { color: #ffffff; }
+    .section-note, .panel p, .focus-row span:last-child, .project p { color: #c4c4c4; }
+    .focus-row span:first-child { color: #ffffff; }
+    .skill-card:hover {
+      border-color: rgba(255,255,255,.36);
+      background: rgba(37,99,235,.16);
+    }
+    .tag { color: #ffffff; }
+    .project {
+      background: linear-gradient(155deg, #122a4c, #080c13);
+    }
+    .project:hover { border-color: rgba(255,255,255,.48); }
+    .project-icon {
+      background: #174b88;
+      color: #ffffff;
+    }
+    .contact-panel {
+      border-color: rgba(255,255,255,.2);
+      background: radial-gradient(ellipse at 90% 20%, rgba(37,99,235,.34), transparent 52%), #0c1119;
+    }
+    .social-link:hover {
+      border-color: rgba(255,255,255,.5);
+      background: #174b88;
+    }
+    footer { color: #c4c4c4; }
+    .footer-mark { color: #ffffff; }
+
   </style>
 </head>
 <body>
